@@ -23,15 +23,18 @@ validity_check = a string that tells the user if sentence is ok or not
 _Make a list of examples of what the method will take and return._
 
 ```ruby
-grammar_check("the cat jumped over the mat") => "Your sentence does not start with a capital letter. Your sentence does not have a suitable sentence-ending punctuation mark."
-grammar_check("The cat jumped over the mat") => "Your sentence does not have a suitable sentence-ending punctuation mark."
-grammar_check("The cat jumped over the mat>") => "Your sentence does not have a suitable sentence-ending punctuation mark."
-grammar_check("the cat jumped over the mat.") => "Your sentence does not start with a capital letter."
-grammar_check("the cat jumped over the mat?") => "Your sentence does not start with a capital letter."
-grammar_check("the cat jumped over the mat!") => "Your sentence does not start with a capital letter."
-grammar_check("The cat jumped over the mat.") => "This sentence is ok."
-grammar_check("The cat jumped over the mat?") => "This sentence is ok."
-grammar_check("The cat jumped over the mat!") => "This sentence is ok."
+#1 
+grammar_check("")
+#fail "not a sentence"
+#2
+grammar_check("The cat jumped over the mat.")
+#true
+#3
+grammar_check("The cat jumped over the mat")
+#false
+#4
+grammar_check("the cat jumped over the mat.")
+#false
 ```
 
 _Encode each example as a test. You can add to the above list as you go._
