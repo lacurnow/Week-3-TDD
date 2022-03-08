@@ -8,16 +8,15 @@
 
 ## 2. Design the Method Signature
 
-_Include the name of the method, its parameters, return value, and side effects._
-
 ```ruby
 tracked_tasks = task_tracker(text)
 
 * text is a string containing words "@TODO walk the dog"
 * tracked_tasks returns true
 ```
-```ruby
+
 ## 3. Create Examples as Tests
+```ruby
 #1
 task_tracker("@TODO walk the dog")
 # => true
@@ -32,5 +31,5 @@ task_tracker("")
 # => false
 #5
 task_tracker(nil)
-# throws an error
+# throws an error "No input given."
 ```
